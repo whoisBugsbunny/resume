@@ -150,12 +150,19 @@ span[name="email"] > a > span {
 
 /* alphabet wise */
 
-/* templetes globle */
-.container-templete {
+/* templates globle */
+.container-template {
 	margin: auto;
 	padding: 20px;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+@media (max-width: 852px) {
+	.container-template {
+		align-items: flex-start;
+	}
 }
 .d-none {
 	display: none;
@@ -176,12 +183,17 @@ span[name="email"] > a > span {
 		-webkit-print-color-adjust: exact; /* For WebKit-based browsers */
 		color-adjust: exact; /* For other browsers that support the standard */
 	}
-	.container-templete {
+	.head-background-2 {
+		background-color: var(--_d-gray);
+		-webkit-print-color-adjust: exact; /* For WebKit-based browsers */
+		color-adjust: exact; /* For other browsers that support the standard */
+	}
+	.container-template {
 		padding: 0;
 		margin: 0;
 	}
 	.page-a4 {
-		/* padding: 0; */
+		padding: 0;
 		width: 100%;
 		height: 1120px;
 		margin: 0;
@@ -207,6 +219,7 @@ span[name="email"] > a > span {
 	z-index: 150;
 	overflow: hidden;
 	border-radius: 50px;
+	box-shadow: 0 0 5px 0px #00000033;
 }
 .mylogo > img {
 	width: 100%;
@@ -422,17 +435,17 @@ span[name="email"] > a > span {
 }
 /* used wise */
 
-/* templete 1 */
-.templete-1 {
+/* template 1 */
+.template-1 {
 	--_outer-padding: 40px;
-	--_gray: #f4f4f4;
-	--_m-gray: #6f6f6f;
+	--_l-gray: #f4f4f4;
+	--_gray: #6f6f6f;
 	--_d-gray: #464a4d;
 	--_divider-line: 1px solid var(--_d-gray);
 	--_blocks-padding: 20px;
-	color: var(--_m-gray);
+	color: var(--_gray);
 }
-.templete-1 > .page-a4 {
+.template-1 > .page-a4 {
 	padding: var(--_outer-padding) 0;
 }
 
@@ -440,7 +453,7 @@ span[name="email"] > a > span {
 	display: flex;
 	text-transform: uppercase;
 	padding: 0 var(--_outer-padding);
-	background-color: var(--_gray);
+	background-color: var(--_l-gray);
 	align-items: center;
 	justify-content: space-between;
 	margin-top: calc(var(--_outer-padding) * (-1));
@@ -509,7 +522,7 @@ span[name="email"] > a > span {
 	word-spacing: 2px;
 } */
 .blocks-container > div > div > span > a {
-	color: var(--_m-gray);
+	color: var(--_gray);
 	word-break: break-all;
 	letter-spacing: 1px;
 }
@@ -539,7 +552,7 @@ span[name="email"] > a > span {
 }
 .education-part > div > div > span {
 	--_gap-btwn: 20px;
-	color: var(--_m-gray);
+	color: var(--_gray);
 }
 .education-part > div > div > span:first-child {
 	margin-right: var(--_gap-btwn);
@@ -597,7 +610,7 @@ span[name="email"] > a > span {
 	padding: var(--_blocks-padding) var(--_blocks-padding) 0 0;
 	grid-area: extraCurricular;
 }
-.templete-1 > div > div > div > div > h3 {
+.template-1 > div > div > div > div > h3 {
 	line-height: 2;
 }
 .softSkill-part {
@@ -620,4 +633,113 @@ span[name="email"] > a > span {
 	border-bottom: var(--_divider-line);
 	padding: 0 var(--_blocks-padding) var(--_blocks-padding) 0;
 	grid-area: projects;
+}
+
+/* template 2 */
+.template-2 {
+	--_outer-padding: 40px;
+	--_l-gray: #f4f4f4;
+	--_gray: #6f6f6f;
+	--_d-gray: #272727;
+	--_divider-line: 1px solid var(--_d-gray);
+	--_blocks-padding: 20px;
+	color: var(--_gray);
+}
+.template-2 > .page-a4 {
+	padding: 0;
+}
+.head-background-2 {
+	display: flex;
+	padding: 10px var(--_outer-padding);
+	background-color: var(--_d-gray);
+	color: var(--light-color-1);
+	align-items: center;
+	justify-content: space-between;
+}
+.head-background-2 > :first-child {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.head-background-2 > div > .profile-image > img {
+	margin-right: 20px;
+	--_size: 100px;
+	width: var(--_size);
+	height: var(--_size);
+	object-fit: cover;
+	border-radius: 50%;
+}
+.head-background-2 > div > .name :first-child {
+	font-size: 34px;
+	letter-spacing: 2px;
+}
+.head-background-2 > div > .name :last-child {
+	font-size: 16px;
+	letter-spacing: 5px;
+}
+.contact-part-2 > div {
+	margin: 5px;
+}
+.contact-part-2 > div > i {
+	width: 17px;
+	margin-right: 10px;
+	text-align: center;
+}
+.contact-part-2 > div > span > a {
+	color: var(--light-color-1);
+}
+.contact-part-2 > div > span {
+	font-size: 14px;
+}
+
+.resume-1-body-1 {
+	display: flex;
+	padding: 20px 30px;
+	height: 100%;
+	font-size: 12px;
+}
+.resume-1-body-1 ul li {
+	margin: 3px 0 3px 20px;
+}
+
+.resume-1-body-1 hr {
+	margin: 10px;
+}
+.left {
+	width: 50%;
+}
+.right {
+	width: 100%;
+}
+.education-part-2 > div > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.education-part-2 > div > div > span {
+	--_gap-btwn: 20px;
+	color: var(--_gray);
+}
+.education-part-2 > div > div > span:first-child {
+	margin-right: var(--_gap-btwn);
+}
+.education-part-2 > div > div > span:last-child {
+	margin-left: var(--_gap-btwn);
+}
+.certification-part > ul > li {
+	font-weight: bold;
+}
+.certification-part > ul > span {
+	display: block;
+	padding: 0 0 0 20px;
+}
+.project-part-2 > div > div,
+.courses-part-2 > div > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.courses-part-2 > div {
+	padding: 3px 0;
 }

@@ -1,6 +1,6 @@
 const navbar = document.querySelector(".navbar");
 const enterToResume = document.querySelector("#enterToResume");
-const containerTemplete = document.querySelector(".container-templete");
+const containerTemplate = document.querySelector(".container-template");
 const homePage = document.querySelector(".home-page");
 const mylogo = document.querySelector(".mylogo");
 // const shapes = document.querySelectorAll(".shape");
@@ -8,17 +8,32 @@ const cursor = document.querySelector("#cursor");
 const cursor2 = document.querySelector("#cursor-2");
 
 enterToResume.addEventListener('click', () => {
-    containerTemplete.classList.remove("d-none");
+    containerTemplate.classList.remove("d-none");
     homePage.classList.add("move-up");
     navbar.classList.add("z-index-200");
     // homePage.classList.add("d-none");
 });
 
 mylogo.addEventListener('click', () => {
-    containerTemplete.classList.add("d-none");
+    containerTemplate.classList.add("d-none");
     homePage.classList.remove("move-up");
     navbar.classList.remove("z-index-200");
 });
+
+const uni_temp1 = document.querySelector('[name="university-t1"]');
+const template1 = document.querySelector('.template-1');
+const canva_temp1 = document.querySelector('[name="canva-t1"]');
+const template2 = document.querySelector('.template-2');
+
+uni_temp1.addEventListener('click', () => {
+    template2.classList.remove('d-none');
+    template1.classList.add('d-none');
+});
+canva_temp1.addEventListener('click', () => {
+    template1.classList.remove('d-none');
+    template2.classList.add('d-none');
+});
+
 
 // Store initial positions
 // const initialPositions = [...shapes].map(shape => {
