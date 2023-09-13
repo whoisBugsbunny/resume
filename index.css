@@ -743,3 +743,59 @@ span[name="email"] > a > span {
 .courses-part-2 > div {
 	padding: 3px 0;
 }
+
+/* edit menu style */
+.edit-menu {
+	--width: 350px;
+	width: var(--width);
+	position: fixed;
+	right: 0;
+	background: var(--dark-color-2);
+	color: var(--light-color-1);
+	height: 100%;
+}
+.edit-menu-container {
+	background-color: var(--dark-color-2);
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+.edit-menu-title {
+	text-transform: uppercase;
+}
+.edit-menu-body > ul {
+	list-style: none;
+	padding: 20px 0;
+}
+.edit-menu-body > ul > :first-child {
+	display: flex;
+	align-items: center;
+}
+.edit-menu-body > ul > :first-child > i {
+	margin-right: 5px;
+}
+.edit-menu-body > ul > li {
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: all 100ms linear;
+}
+.edit-menu-body span,
+.edit-menu-body span > input {
+	width: 100%;
+}
+.edit-contact > div {
+	display: flex;
+	align-items: center;
+}
+
+.edit-contact > div > i {
+	width: 17px;
+	margin-right: 10px;
+	text-align: center;
+}
+.edit-contact > div > span,
+.edit-contact > div > span > input {
+	width: 100%;
+}
